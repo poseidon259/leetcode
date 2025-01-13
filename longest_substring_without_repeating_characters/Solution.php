@@ -16,6 +16,7 @@ class Solution
         while ($j < $strLen) {
             $iValue = $s[$i];
             $jValue = $s[$j];
+
             if (!isset($hashMap[$jValue])) {
                 $hashMap[$jValue] = 1;
                 $j++;
@@ -24,7 +25,6 @@ class Solution
                 unset($hashMap[$iValue]);
                 $i++;
             }
-            echo $maxLength;
         }
 
         return $maxLength;
